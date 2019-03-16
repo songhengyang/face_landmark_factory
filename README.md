@@ -22,6 +22,8 @@
 
 测试程序退出： 按q键
 
+（注：test_webcam.py 默认读取本地视频文件 vid.avi，如拟将摄像头作为视频输入源，需要修改“VIDEO_PATH”参数。）
+
 参数说明：
 
 1. current_model，模型文件路径
