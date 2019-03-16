@@ -1,0 +1,226 @@
+# facial-landmark-factory（人脸特征点检测生产系统）
+
+## 项目简介
+
+[facial-landmark-factory](https://github.com/songhengyang/face_landmark_factory) 是用Python编写的人脸特征点检测生产系统，使用Tensorflow r1.13以及后续版本的高层组件Keras和Data。使用者利用本系统内置的检测模型处理含有人脸的图像和视频数据，能够便捷地实现人脸特征点自动标注、标注点手工修正、标注数据格式转换和人脸特征点检测模型训练等功能，最终可以实现快速生成定制化、适用于特定应用场景的人脸特征点检测模型。
+
+## 功能特性
+
+1. 系统可自动检测、采集视频数据中包含人脸数据的帧，利用内置的人脸特征点检测模型进行自动标注，
+
+2. 利用本系统提供的工具，使用者可以便捷、高效地对自动标注工具生成的人脸特征点坐标进行手工修正，
+
+3. 系统可对标注数据文件的格式进行转换，可转换生成tensorflow识别的数据格式，
+
+4. 系统内置了七种主流深度学习神经网络，使用者可以利用内置神经网络对私有数据进行训练，生成定制化、适用于特定应用场景的人脸特征点检测模型，
+
+5. 使用者可以调整内置算法，修改深度学习神经网络，优化人脸特征点检测的效果。
+
+## 快速尝试
+
+测试程序启动： ./testing/test_webcam.py
+
+测试程序退出： 按q键
+
+参数说明：
+
+1. current_model，模型文件路径
+
+   如：current_model = "../model/facial_landmark_cnn.pb"
+
+2. VIDEO_PATH，视频文件路径
+
+   如：VIDEO_PATH = "../data/vid.avi" 或 VIDEO_PATH = 0（0 表示使用本地摄像头作为视频源）
+
+3. CNN_INPUT_SIZE，网络输入图像的高度（宽度与高度相同）
+
+   如：CNN_INPUT_SIZE = 64，
+
+<p align="center">
+<img src="https://github.com/songhengyang/face_landmark_factory/blob/master/sample/landmark.gif", width="690">
+</p>
+<div align="center">
+&nbsp;
+</div>
+
+## 运行环境
+1. ubuntu 16.04.2
+
+## 依赖
+1. tensorflow 1.13 
+2. keras 2.0 及以上版本
+3. opencv 3.4 及以上版本
+4. python3
+
+## 使用教程
+1. <a href="#1">视频文件的自动标注</a>
+2. <a href="#2">数据预处理</a>
+3. <a href="#3">数据训练</a>
+4. <a href="#4">模型转换</a>
+5. <a href="#5">模型测试</a>
+
+
+### <a name="1">视频文件的自动标注</a>
+
+- ./data_generate/video_auto_label.py
+
+    该工具读入视频文件，利用本系统内置的人脸特征点检测模型，识别视频文件中出现的人脸图像，自动进行人脸特征点标注，生成pts格式文件，并将人脸图像文件和pts格式的标注文件存入同一指定目录。
+
+    参数说明：
+
+    MODEL_FILE，人脸特征点检测模型文件路径，
+    
+    如：MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
+
+    VIDEO_PATH，视频文件路径，
+    
+    如：VIDEO_PATH = "../data/IU.avi"
+    
+    OUTPUT_DIR，人脸图像和pts格式标注文件的路径，
+    
+    如：OUTPUT_DIR = "../data/out"
+    
+    CNN_INPUT_SIZE，神经网络输入图像尺寸，长度宽度相等，
+
+    CNN_INPUT_SIZE = 64
+
+### <a name="2">数据预处理</a>
+
+- ./data_generate/from_pts_to_json_box_image.py
+
+    该工具读入pts格式的标注数据文件，计算生成人脸方框坐标，然后将人脸方框坐标数据和人脸标注数据，以json格式分别写入人脸方框坐标文件和人脸标注文件。
+
+    参数说明：
+
+    INPUT_LIST，存储pts标注文件的目录列表，
+    
+    如： INPUT_LIST = ["../data/out"]
+
+    OUTPUT_DIR，转换为json格式的人脸方框坐标数据文件和人脸标注数据文件的路径，
+
+    如： OUTPUT_DIR = "../data/json"
+
+- ./data_generate/manual_correct_label.py
+
+    该工具帮助使用者对人脸特征点标注坐标进行手工修正。工具读入原始图像文件、jason格式的人脸方框坐标文件和人脸特征点标注文件，显示已经标注人脸方框和特征点的图像，使用者可以通过键盘对人脸方框坐标和人脸特征点坐标进行手工修正，最后生成经过修正的人脸方框坐标文件和人脸特征点标注文件。
+    
+    参数说明：
+
+    INPUT_DIR， 人脸方框坐标文件目录和人脸特征点标注文件目录的上级目录
+
+    如：INPUT_DIR = "../data/json"
+
+    使用键盘对人脸方框图特征标注点进行修正的操作说明（需鼠标点击图像激活）：    
+
+    按空格键：下一幅图像文件 
+
+    按b键：上一幅图像文件
+
+    按q键：上一个特征点
+
+    按e键：下一个特征点
+
+    按a键：特征点向左移一个像素
+
+    按d键：特征点向右移一个像素
+
+    按w键：特征点向上移一个像素
+
+    按s键：特征点向下移一个像素
+
+    程序退出：
+
+    按Esc键
+
+- ./data_generate/gen_argment.py
+
+    该工具利用数量有限的人脸图像数据集，根据规则生成增强数据集，从而提高模型训练效果。工具读入指定目录的人脸图像文件和人脸特征点检测标注文件，并根据工具内置规则生成增强数据集。使用增强数据集进行训练可大幅提高深度学习神经网络的训练效果，生成优化的人脸特征点检测模型。
+
+    INDIR_LIST，人脸图像文件目录和人脸特征点检测标注文件目录的上级目录列表。
+
+    如：INDIR_LIST = ["../data/json","../data/json01"]
+    
+    OUTPUT_DIR，增强数据集文件目录
+    
+    如：OUTPUT_DIR = "../data/augment"
+
+- ./data_generate/gen_tfrecord.py
+
+    该工具读入指定目录的数据集，生成tensorflow训练用的tfrecords格式数据文件。
+
+    input_list，存储数据集的目录列表
+    
+    如：input_list = ["../data/json","../data/json01"]
+
+    tfrecord_file_dir，工具生成的tfrecords格式数据文件的存储目录。
+    
+    如：tfrecord_file_dir = "../data/tfrecord"
+
+    index_extract，用于生成tfrecords格式数据文件的人脸特征点编号列表，空列表为提取全部特征点。  
+  
+    如：index_extract = []
+
+### <a name="3">数据训练</a>
+
+- ./training/train_models.py
+
+    该工具读入指定目录下的tfrecord格式训练数据集，使用用户选定的神经网络（共有7种），训练生成人脸特征点检测模型，模型格式为h5（keras可用）。
+
+    DATA_DIR，tfrecord格式的训练数据路径
+    
+    如：DATA_DIR = "../data/tfrecord"
+
+    LOADING_PRETRAIN，预训练开关（True/False）
+    
+    如：LOADING_PRETRAIN = False
+    
+    BATCH_SIZE，BATCH
+
+    如：BATCH_SIZE = 10
+    
+    STEPS_PER_EPOCH，训练数据数量
+    
+    如：STEPS_PER_EPOCH = 100    
+    
+    TEST_STEPS，测试数据数量
+    
+    如：TEST_STEPS = 11
+    
+    EPOCHS，训练迭代次数
+    
+    如：EPOCHS = 1000
+    
+    IMAGE_SIZE，图像像素值（长宽值相同）
+    
+    如：IMAGE_SIZE = 64
+    
+
+### <a name="4">模型转换</a>
+
+- ./model_converter/h5_to_pb.py， 
+
+    该工具将h5模型文件转为pb模型文件，显示输入和输出层名称。
+
+- ./model_converter/to_tflite.sh， 
+
+    该工具将pb模型文件转为tflite模型文件。
+
+### <a name="5">模型测试</a>
+
+- ./testing/test_webcam.py
+
+    训练生成pb格式模型可利用本工具测试人脸检测模型训练效果。
+
+    测试程序启动： 
+    
+    ./testing/test_webcam.py
+
+    测试程序退出： 
+    
+    按q键
+
+
+## 引用
+1. https://github.com/yinguobing/cnn-facial-landmark
+
+## 版权信息
