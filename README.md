@@ -196,6 +196,7 @@
     
     如：IMAGE_SIZE = 64
     
+    （注：工具训练新生成的人脸特征点检测模型文件路径： ../model/facial_landmark_SqueezeNet.h5）
 
 ### <a name="4">模型转换</a>
 
