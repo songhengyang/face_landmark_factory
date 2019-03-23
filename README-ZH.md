@@ -39,7 +39,7 @@
    如：CNN_INPUT_SIZE = 64，
 
 <p align="center">
-<img src="https://github.com/songhengyang/face_landmark_factory/blob/master/sample/landmark.gif", width="690">
+<img src="https://github.com/songhengyang/face_landmark_factory/blob/master/data/smpl.gif", width="690">
 </p>
 <div align="center">
 &nbsp;
