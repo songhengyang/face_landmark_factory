@@ -222,7 +222,7 @@ Parameter Description:
     Press q
 
 
-## Quote
+## Quotation
 1. https://github.com/yinguobing/cnn-facial-landmark
 
-## Copyright Information
+## Copyright
