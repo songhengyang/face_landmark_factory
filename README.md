@@ -26,7 +26,7 @@ Test program exit: Press q
 
 Parameter Description:
 
-1. current_model, model file path
+1. current_model, file of model
 
    Such as: current_model = "../model/facial_landmark_cnn.pb"
 
