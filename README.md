@@ -197,6 +197,7 @@ Parameter Description:
     Such as: IMAGE_SIZE = 64
     
     (Note: Tool training newly generated facial landmark detection model file path: ../model/facial_landmark_SqueezeNet.h5) 
+
 ###<a name="4">Model Conversion</a>
 
 - ./model_converter/h5_to_pb.py,
@@ -220,7 +221,6 @@ Parameter Description:
     Test program exit:
     
     Press q
-
 
 ## Quotation
 1. https://github.com/yinguobing/cnn-facial-landmark
