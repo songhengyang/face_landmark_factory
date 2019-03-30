@@ -26,15 +26,15 @@ Test program exit: Press q
 
 Parameter Description:
 
-1.current_model, file of model
+1. current_model, file of model
 
 Such as: current_model = "../model/facial_landmark_cnn.pb"
 
-2.VIDEO_PATH, video file path
+2. VIDEO_PATH, video file path
 
 Such as: = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
 
-3.CNN_INPUT_SIZE, the height of the network input image (the same width and height)
+3. CNN_INPUT_SIZE, the height of the network input image (the same width and height)
 
 Such as: CNN_INPUT_SIZE = 64,
 
@@ -47,6 +47,7 @@ Such as: CNN_INPUT_SIZE = 64,
 
 ## Operating environment
 1. ubuntu 16.04.2
+2. 
 
 ## Dependency
 1. tensorflow 1.13
