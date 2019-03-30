@@ -61,7 +61,6 @@ Such as: CNN_INPUT_SIZE = 64,
 4. <a href="#4">Model Conversion</a>
 5. <a href="#5">Model Testing</a>
 
-
 ### <a name="1">Automatic annotation of video files</a>
 
 - ./data_generate/video_auto_label.py
