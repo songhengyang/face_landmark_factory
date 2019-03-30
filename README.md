@@ -2,7 +2,7 @@
 
 ## Project Description
 
-[facial-landmark-factory] (https://github.com/songhengyang/face_landmark_factory) is a face landmark detection production system written in Python, using Tensorflow r1.13 and subsequent high-level components Keras and Data. The users can use the built-in detection model of the system to process images and video data containing human faces, and can conveniently implement functions such as automatic annotation of facial landmark, manual position correction of points, data format conversion, and face landmark detection model training. Finally, it is possible to quickly generate a customized face landmark detection model suitable for a specific application scenario.
+[facial-landmark-factory] (https://github.com/songhengyang/face_landmark_factory) is a production system of facial landmark detector written in Python, using Tensorflow r1.13 and subsequent high-level components Keras and Data. Users can use the built-in detection model of this system to process images and video data containing human faces, and conveniently implement functions such as automatic annotation of facial landmark, manual correction of landmark points, conversion of data format, and model training of facial landmark detection. Finally, it is possible to quickly generate a customized the model of facial landmark detection suitable for a specific application scenario.
 
 ## Features
 
@@ -26,7 +26,7 @@ To exit from the test program:
 
     Press q
 
-(Note: test_webcam.py reads the local video file vid.avi by default. If you want to use the camera as the input source, you need to modify the "VIDEO_PATH" parameter.)
+(Note: test_webcam.py reads the local video file vid.avi by default. If you have a camera with your PC, and want to use the camera as the input source of the test program, you need to modify the value of "VIDEO_PATH".)
 
 Parameter Description
     
