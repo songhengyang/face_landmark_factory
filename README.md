@@ -260,8 +260,13 @@ To exit from test program:
 
     Press q
 
-## Quotation
+## References
 
 1. https://github.com/yinguobing/cnn-facial-landmark
 
+2. https://some.other.site/subdir/
+
 ## Copyright
+
+## Thanks
+
