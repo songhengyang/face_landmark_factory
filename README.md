@@ -56,16 +56,22 @@ or
 </div>
 
 ## Operating System
-1. ubuntu 16.04.2
+
+1.ubuntu 16.04.2
 
 ## Dependency
+
 1.tensorflow 1.13
+
 2.keras 2.0 and above
+
 3.opencv 3.4 and above
+
 4.python3
 
 ## Tutorial
-1. <a href="#1">Automatic annotation of video files</a>
+
+1.<a href="#1">Automatic annotation of video files</a>
 
 2.<a href="#2">Data Preprocessing</a>
 
