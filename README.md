@@ -65,10 +65,14 @@ or
 4.python3
 
 ## Tutorial
-1.<a href="#1">Automatic annotation of video files</a>
+1. <a href="#1">Automatic annotation of video files</a>
+
 2.<a href="#2">Data Preprocessing</a>
+
 3.<a href="#3">Data Training</a>
+
 4.<a href="#4">Model Conversion</a>
+
 5.<a href="#5">Model Testing</a>
 
 ### <a name="1">Automatic annotation of video files</a>
