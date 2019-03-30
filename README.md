@@ -66,39 +66,22 @@ Such as: CNN_INPUT_SIZE = 64,
 
 - ./data_generate/video_auto_label.py
 
-    The tool reads the video file, uses the built-in facial landmark detection model of the system, recognizes the face image appearing in the frames, automatically performs face landmark annotation, generates a pts format file, the face image file and pts formatted dimension files are stored in the same directory.
-
-    Parameter Description:
-
-    MODEL_FILE, face landmark detection model file path,
-    
-    
-    Such as: MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
-
-    
-    VIDEO_PATH, video file path,
-    
-    
-    Such as: VIDEO_PATH = "../data/IU.avi"
-    
-    
-    OUTPUT_DIR, the face image and the path to the pts format annotation file,
-    
-    
-    Such as: OUTPUT_DIR = "../data/out"
-    
-    
-    CNN_INPUT_SIZE, neural network input image size, length and width are equal,
-
-    
-    CNN_INPUT_SIZE = 64
-
+The tool reads the video file, uses the built-in facial landmark detection model of the system, recognizes the face image appearing in the frames, automatically performs face landmark annotation, generates a pts format file, the face image file and pts formatted dimension files are stored in the same directory.
+Parameter Description:
+MODEL_FILE, face landmark detection model file path,
+Such as: MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
+VIDEO_PATH, video file path,
+Such as: VIDEO_PATH = "../data/IU.avi"
+OUTPUT_DIR, the face image and the path to the pts format annotation file,
+Such as: OUTPUT_DIR = "../data/out"
+CNN_INPUT_SIZE, neural network input image size, length and width are equal,
+CNN_INPUT_SIZE = 64
 
 ### <a name="2">Data Preprocessing</a>
 
 - ./data_generate/from_pts_to_json_box_image.py
 
-    The tool reads the annotation data file in pts format, calculates the positions of the generated face box, and then writes the face frame position data and the face annotation data into the face box position file and the face annotation file in json format.
+    The tool reads the annotation data file in pts format, calculates the positions of the generated face box, and then writes the face frame position data and the face annotation data into the face box position file and the face annotation file in json format.
 
     Parameter Description:
 
