@@ -87,9 +87,9 @@ VIDEO_PATH, file of the video, such as:
 
     VIDEO_PATH = "../data/IU.avi"
 
-OUTPUT_DIR, the directory storing the files of facial image and the files of pts format annotation,
+OUTPUT_DIR, the directory storing the files of facial image and the files of pts format annotation, such as:
 
-    Such as: OUTPUT_DIR = "../data/out"
+    OUTPUT_DIR = "../data/out"
 
 CNN_INPUT_SIZE, input image size of neural network, height and width are the same,
 
@@ -99,15 +99,15 @@ CNN_INPUT_SIZE, input image size of neural network, height and width are the sam
 
 - ./data_generate/from_pts_to_json_box_image.py
 
-    This tool reads files of annotation data in pts format, calculates the dimensions of the generated facial box, and then records the dimentions of facial box and the facial annotation data into the files facial box dimention and the face annotation file in json format.
+    This tool reads files of annotation data in pts format, calculates the dimensions of the generated facial box, and then records the dimentions of facial box and the facial annotation data into the files of facial box dimention and the files of facial landmark in json format.
 
-    Parameter Description:
+Parameter Description
 
-    INPUT_LIST, which stores a directory listing of pts annotation files,
+INPUT_LIST, the list of directories storing pts annotation files, such as:
     
-    Such as: INPUT_LIST = ["../data/out"]
+    INPUT_LIST = ["../data/out"]
 
-    OUTPUT_DIR, converted to the path of the face box position data file and the face label data file in json format,
+OUTPUT_DIR, the directory storing files of the facial box dimentions and the files of facial landmarks in json format,
 
     Such as: OUTPUT_DIR = "../data/json"
 
@@ -115,16 +115,15 @@ CNN_INPUT_SIZE, input image size of neural network, height and width are the sam
 
     This tool helps the user to manually correct the postions of the face landmark. The tool reads the original image file, the face box positions file of the jason format, and the face landmark annotation file, and displays the image of the face box and the landmark that has been marked, and the user can use the keyboard to correct the positions of the landmark. The facial landmark are manually corrected, and finally the corrected face box position file and the face landmark file are generated.
     
-    Parameter Description:
+Parameter Description
 
-    INPUT_DIR, the face box positions file directory and the upper level directory of the face landmark file directory
-
+INPUT_DIR, the directory storing files of facial dimensions and the files of facial landmarks, such as:
     
-    Such as: INPUT_DIR = "../data/json"
+    INPUT_DIR = "../data/json"
 
-    Instructions for correcting the facial labelling positions using the keyboard (requires activation by click the right button):
+Instructions for correcting the facial landmarks with keyboard (requires activation of the window by click the right button):
 
-    Press the space bar: next image file
+    Press the space bar: next image file
 
     Press b: the previous image file
 
