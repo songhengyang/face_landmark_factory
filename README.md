@@ -2,7 +2,7 @@
 
 ## Project Description
 
-[facial-landmark-factory] (https://github.com/songhengyang/face_landmark_factory) is a production system of facial landmark detector written in Python, using Tensorflow r1.13 and subsequent high-level components Keras and Data. Users can use the built-in detection model of this system to process images and video data containing human faces, and conveniently implement functions such as automatic annotation of facial landmark, manual correction of landmark points, conversion of data format, and model training of facial landmark detection. Finally, it is possible to quickly generate a customized the model of facial landmark detection suitable for a specific application scenario.
+[facial-landmark-factory] (https://github.com/songhengyang/face_landmark_factory) is a production system of facial landmark detector written in Python, using Tensorflow r1.13 and subsequent high-level components Keras and Data. Users can use the built-in detection model of this system to process images and video data containing human faces, and conveniently implement functions such as automatic annotation of facial landmark, manual correction of landmark points, conversion of data format, and model training of facial landmark detection. Finally, it is possible to quickly generate a customized model of facial landmark detection suitable for a specific application scenario.
 
 ## Features
 
