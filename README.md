@@ -26,7 +26,7 @@ To exit from the test program:
 
     Press q
 
-(Note: test_webcam.py reads the local video file vid.avi by default. If you have a camera with your PC, and want to use the camera as the input source of the test program, you need to modify the value of "VIDEO_PATH".)
+(Note: test_webcam.py reads the local video file vid.avi by default. If you have a camera with your PC, and want to use the camera as the input source of the test program, you need to modify the value of pamameter "VIDEO_PATH".)
 
 Parameter Description
     
@@ -55,7 +55,7 @@ or
 &nbsp;
 </div>
 
-## Operating environment
+## Operating System
 1. ubuntu 16.04.2
 
 ## Dependency
@@ -75,7 +75,7 @@ or
 
 - ./data_generate/video_auto_label.py
 
-    The tool reads the video file, uses the built-in facial landmark detection model of the system, recognizes the face image appearing in the frames, automatically performs face landmark annotation, generates a pts format file, the face image file and pts formatted dimension files are stored in the same directory.
+    This tool reads the video file, uses the built-in model of facial landmark detection with this system, recognizes faces appearing in the frames, automatically annotates face landmarks, generates a file of pts format, the files facial image and the files of pts formatted dimension are stored in a same directory.
 
 Parameter Description
 
