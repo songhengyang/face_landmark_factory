@@ -206,73 +206,61 @@ Index_extract, used to generate a list of face landmark numbers in the file of t
     This tool reads the training data sets of the tfrecord format in the given directory, trains and generates the facial landmark detection model with the user-selected neural network (total of 7 types). The model format is h5 (keras can read).
 
 DATA_DIR, directory storing training data in tfrecord format, such as:
-    
+
     DATA_DIR = "../data/tfrecord"
 
 LOADING_PRETRAIN, pre-training switch (True/False), such as:
-    
+
     LOADING_PRETRAIN = False
-    
+
 BATCH_SIZE, BATCH, such as:
-    
+
     BATCH_SIZE = 10
-    
+
 STEPS_PER_EPOCH, the amount of training data, such as:
-    
+
     STEPS_PER_EPOCH = 100
 
 TEST_STEPS, the number of test data, such as:
-    
+
     TEST_STEPS = 11
 
 EPOCHS, training iterations, such as:
-    
+
     EPOCHS = 1000
 
 IMAGE_SIZE, image pixel value (length and width values are the same), such as:
-    
+
     IMAGE_SIZE = 64
-    
+
 (Note: Tool training newly generated facial landmark detection model file path: ../model/facial_landmark_SqueezeNet.h5) 
 
 ###<a name="4">Model Conversion</a>
 
-
 - ./model_converter/h5_to_pb.py,
 
     The tool converts h5 model files into pb model files, showing input and output layer names.
-    
 
 - ./model_converter/to_tflite.sh,
 
     This tool converts pb model files into tflite model files.
-    
 
 ### <a name="5">Model Testing</a>
 
-
 - ./testing/test_webcam.py
 
-
     Generated pb format model can be used to test the facial landmark detection model training effect.
-    
 
-    The test program starts:
-    
-    
+To start test program:
+
     ./testing/test_webcam.py
-    
 
-    Test program exit:
-    
-    
+To exit from test program:
+
     Press q
-    
 
 ## Quotation
 
-
 1. https://github.com/yinguobing/cnn-facial-landmark
-
 
 ## Copyright
