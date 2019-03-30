@@ -42,7 +42,7 @@ or
 
     VIDEO_PATH = 0 
 
-(0 means using a local camera as the input source)
+(0 means that the input source is a local camera)
 
 3.CNN_INPUT_SIZE, the height of the network input image (height and width are the same), Such as:
 
@@ -75,7 +75,7 @@ or
 
 - ./data_generate/video_auto_label.py
 
-    This tool reads the video file, uses the built-in model of facial landmark detection with this system, recognizes faces appearing in the frames, automatically annotates face landmarks, generates a file of pts format, the files of facial image and the files of pts formatted dimension are stored in a same directory.
+    This tool reads the video file, with the built-in models of facial landmark detection in this system, recognizes image of faces appearing in the frames, automatically annotates face landmarks, generates a file of pts format, the files of facial image and the files of pts formatted dimension are stored in a same directory.
 
 Parameter Description
 
@@ -99,7 +99,7 @@ CNN_INPUT_SIZE, input image size of neural network, height and width are the sam
 
 - ./data_generate/from_pts_to_json_box_image.py
 
-    This tool reads files of annotation data in pts format, calculates the dimensions of the generated facial box, and then records the dimentions of facial box and the facial annotation data into the files of facial box dimention and the files of facial landmark in json format.
+    This tool reads files of annotation data in pts format, calculates the dimensions of the generated facial box, and then records the dimensions of facial box and the facial annotation data into the files of facial box dimension and the files of facial landmark in json format.
 
 Parameter Description
 
@@ -107,13 +107,13 @@ INPUT_LIST, the list of directories storing pts annotation files, such as:
     
     INPUT_LIST = ["../data/out"]
 
-OUTPUT_DIR, the directory storing files of the facial box dimentions and the files of facial landmarks in json format,
+OUTPUT_DIR, the directory storing files of the facial box dimensions and the files of facial landmarks in json format, such as:
 
-    Such as: OUTPUT_DIR = "../data/json"
+    OUTPUT_DIR = "../data/json"
 
 - ./data_generate/manual_correct_label.py
 
-    This tool helps the user to manually correct the postions of the face landmark. The tool reads the original image file, the face box positions file of the jason format, and the face landmark annotation file, and displays the image of the face box and the landmark that has been marked, and the user can use the keyboard to correct the positions of the landmark. The facial landmark are manually corrected, and finally the corrected face box position file and the face landmark file are generated.
+    This tool helps users to correct the dimensions of the facial landmark manually. The tool reads files of original image, files of facial box dimensions in jason format, and files of facial landmark. And to display images of the facial box and landmark that has been marked, and the user can use the keyboard to correct the positions of the landmark. The facial landmark are manually corrected, and finally correct facial dimensions and the face landmark file are generated.
     
 Parameter Description
 
