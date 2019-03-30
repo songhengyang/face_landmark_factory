@@ -245,6 +245,7 @@ IMAGE_SIZE, image pixel value (length and width values are the same), such as:
 
     This tool converts pb model files into tflite model files.
 
+
 ### <a name="5">Model Testing</a>
 
 - ./testing/test_webcam.py
@@ -258,6 +259,7 @@ To start test program:
 To exit from test program:
 
     Press q
+
 
 ## Quotation
 
