@@ -1,6 +1,6 @@
 # facial-landmark-factory（人脸特征点检测生产系统）
 
-##项目简介
+## 项目简介
 
 [facial-landmark-factory](https://github.com/songhengyang/face_landmark_factory) 是用Python编写的人脸特征点检测生产系统，使用Tensorflow r1.13以及后续版本的高层组件Keras和Data。使用者利用本系统内置的检测模型处理含有人脸的图像和视频数据，能够便捷地实现人脸特征点自动标注、标注点手工修正、标注数据格式转换和人脸特征点检测模型训练等功能，最终可以实现快速生成定制化、适用于特定应用场景的人脸特征点检测模型。
 
@@ -223,7 +223,7 @@
     按q键
 
 
-##引用
+## 引用
 1. https://github.com/yinguobing/cnn-facial-landmark
 
 ## 版权信息
