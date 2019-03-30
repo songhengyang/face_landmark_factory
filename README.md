@@ -44,7 +44,7 @@ or
 
 (0 means using a local camera as the input source)
 
-3.CNN_INPUT_SIZE, the height of the network input image (the same width and height), Such as
+3.CNN_INPUT_SIZE, the height of the network input image (height and width are the same), Such as:
 
     CNN_INPUT_SIZE = 64
 
@@ -75,11 +75,11 @@ or
 
 - ./data_generate/video_auto_label.py
 
-    This tool reads the video file, uses the built-in model of facial landmark detection with this system, recognizes faces appearing in the frames, automatically annotates face landmarks, generates a file of pts format, the files facial image and the files of pts formatted dimension are stored in a same directory.
+    This tool reads the video file, uses the built-in model of facial landmark detection with this system, recognizes faces appearing in the frames, automatically annotates face landmarks, generates a file of pts format, the files of facial image and the files of pts formatted dimension are stored in a same directory.
 
 Parameter Description
 
-MODEL_FILE, file of the face landmark detection model, such as：
+MODEL_FILE, the file of face landmark detection model, such as：
 
     MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
 
@@ -87,11 +87,11 @@ VIDEO_PATH, file of the video, such as:
 
     VIDEO_PATH = "../data/IU.avi"
 
-    OUTPUT_DIR, the face image and the path to the pts format annotation file,
+OUTPUT_DIR, the directory storing the files of facial image and the files of pts format annotation,
 
     Such as: OUTPUT_DIR = "../data/out"
 
-    CNN_INPUT_SIZE, neural network input image size, length and width are equal,
+CNN_INPUT_SIZE, input image size of neural network, height and width are the same,
 
     CNN_INPUT_SIZE = 64
 
