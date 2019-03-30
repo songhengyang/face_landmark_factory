@@ -99,7 +99,7 @@ CNN_INPUT_SIZE, input image size of neural network, height and width are the sam
 
 - ./data_generate/from_pts_to_json_box_image.py
 
-    The tool reads the annotation data file in pts format, calculates the positions of the generated face box, and then writes the face frame position data and the face annotation data into the face box position file and the face annotation file in json format.
+    This tool reads files of annotation data in pts format, calculates the dimensions of the generated facial box, and then records the dimentions of facial box and the facial annotation data into the files facial box dimention and the face annotation file in json format.
 
     Parameter Description:
 
