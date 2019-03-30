@@ -250,16 +250,15 @@ IMAGE_SIZE, image pixel value (length and width values are the same), such as:
 
 - ./testing/test_webcam.py
 
-    Generated pb format model can be used to test the facial landmark detection model training effect.
+Generated pb format model can be used to test the facial landmark detection model training effect.
 
 To start test program:
 
-    ./testing/test_webcam.py
+    ./testing/test_webcam.py
 
 To exit from test program:
 
-    Press q
-
+    Press q
 
 ## Quotation
 
