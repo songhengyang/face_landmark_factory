@@ -147,11 +147,11 @@ Move one pixel to right:
 
     Press d
 
-Move the next pixel:
+Move one pixel to upper:
 
     Press w
 
-Move the landmark to last pixel:
+Move one pixel to lower:
 
     Press s
 
@@ -161,20 +161,16 @@ To exit from program:
 
 - ./data_generate/gen_argment.py
 
-    The tool uses a limited number of face image datasets to generate augment datasets based on rules to improve model training. The tool reads the facial image file and the facial landmark detection annotation file of the specified directory, and generates an augment data set according to the built-in rules of the tool. Training with augment data sets can greatly improve the training effect of deep learning neural networks and generate an optimized face landmark detection model.
+    This tool reads a limited number of facial images and generate augment datasets based on rules to improve model training. This tool reads files of facial image and files of facial landmark in a given directory, and generates an augment dataset according to the built-in rules of the tool. Training with augment datasets can greatly improve the training effect of deep learning neural networks and generate an optimized facial landmark detection model.
 
-    INDIR_LIST, the facial image file directory and the face landmark detection list of the upper directory of the annotation file directory.
-
+INDIR_LIST, the list of directory storing files of facial image and files of the facial landmark in jason format, such as:
     
-    Such as: INDIR_LIST = ["../data/json","../data/json01"]
+    INDIR_LIST = ["../data/json","../data/json01"]
+
+OUTPUT_DIR, the directory storing the files of augment datasets, such as,
+  
+    OUTPUT_DIR = "../data/augment"
     
-    
-    OUTPUT_DIR, enhanced dataset file directory
-    
-    
-    Such as: OUTPUT_DIR = "../data/augment"
-    
-
 - ./data_generate/gen_tfrecord.py
 
 
