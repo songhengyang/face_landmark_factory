@@ -28,15 +28,15 @@ Parameter Description:
 
 1. current_model, file of model
 
-   Such as: current_model = "../model/facial_landmark_cnn.pb"
+Such as: current_model = "../model/facial_landmark_cnn.pb"
 
 2. VIDEO_PATH, video file path
 
-   For example: VIDEO_PATH = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
+Such as: = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
 
 3. CNN_INPUT_SIZE, the height of the network input image (the same width and height)
 
-   Such as: CNN_INPUT_SIZE = 64,
+Such as: CNN_INPUT_SIZE = 64,
 
 <p align="center">
 <img src="https://github.com/songhengyang/face_landmark_factory/blob/master/data/smpl.gif", width="690">
