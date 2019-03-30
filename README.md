@@ -18,21 +18,31 @@
 
 ## Quick Start
 
-    The test program starts: ./testing/test_webcam.py
+To start the test program: 
 
-    Test program exit: Press q
+    ./testing/test_webcam.py
 
-    (Note: test_webcam.py reads the local video file vid.avi by default. If you want to use the camera as a video input source, you need to modify the "VIDEO_PATH" parameter.)
+To exit from the test program: 
 
-    Parameter Description:
+    Press q
 
-1. current_model, file of model
+(Note: test_webcam.py reads the local video file vid.avi by default. If you want to use the camera as the input source, you need to modify the "VIDEO_PATH" parameter.)
 
-    Such as: current_model = "../model/facial_landmark_cnn.pb"
+Parameter Description
+    
+1.current_model, file of model, such as:
 
-2. VIDEO_PATH, video file path
+    current_model = "../model/facial_landmark_cnn.pb"
 
-    Such as: = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
+2.VIDEO_PATH, video file path, such as:
+
+    VIDEO_PATH = "../data/vid.avi" 
+
+or 
+
+    VIDEO_PATH = 0 
+
+(0 means using a local camera as a video source)
 
 3. CNN_INPUT_SIZE, the height of the network input image (the same width and height)
 
