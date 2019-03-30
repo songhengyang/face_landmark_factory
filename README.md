@@ -125,27 +125,39 @@ Instructions for correcting the facial landmarks with keyboard (requires activat
 
 Skip to the file of next image:
 
-    next image file
+    Press space
 
-Skip to the file of previous image
+Back to the file of previous image:
 
     Press b
 
-    Press q: the last point
+Shift to the last point:
 
-    Press e: the next point
+    Press q
 
-    Press a: shifts one pixel to the left
+Shift to the next point:
 
-    Press d: shifts one pixel to the right
+    Press e
 
-    Press the w key: moves to next pixel
+Move one pixel to left:
 
-    Press s: the feature point moves to last pixel
+    Press a
 
-    Program exit:
+Move one pixel to right:
 
-    Press the Esc key
+    Press d
+
+Move the next pixel:
+
+    Press w
+
+Move the landmark to last pixel:
+
+    Press s
+
+To exit from program:
+
+    Press Esc
 
 - ./data_generate/gen_argment.py
 
