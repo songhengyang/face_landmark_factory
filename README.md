@@ -103,8 +103,7 @@ Such as: CNN_INPUT_SIZE = 64,
     Parameter Description:
 
     INPUT_LIST, which stores a directory listing of pts annotation files,
-    
-
+    
     Such as: INPUT_LIST = ["../data/out"]
 
     OUTPUT_DIR, converted to the path of the face box position data file and the face label data file in json format,
