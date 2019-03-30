@@ -18,25 +18,25 @@
 
 ## Quick Start
 
-The test program starts: ./testing/test_webcam.py
+    The test program starts: ./testing/test_webcam.py
 
-Test program exit: Press q
+    Test program exit: Press q
 
-(Note: test_webcam.py reads the local video file vid.avi by default. If you want to use the camera as a video input source, you need to modify the "VIDEO_PATH" parameter.)
+    (Note: test_webcam.py reads the local video file vid.avi by default. If you want to use the camera as a video input source, you need to modify the "VIDEO_PATH" parameter.)
 
-Parameter Description:
+    Parameter Description:
 
 1. current_model, file of model
 
-Such as: current_model = "../model/facial_landmark_cnn.pb"
+    Such as: current_model = "../model/facial_landmark_cnn.pb"
 
 2. VIDEO_PATH, video file path
 
-Such as: = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
+    Such as: = "../data/vid.avi" or VIDEO_PATH = 0 (0 means using a local camera as a video source)
 
 3. CNN_INPUT_SIZE, the height of the network input image (the same width and height)
 
-Such as: CNN_INPUT_SIZE = 64,
+    Such as: CNN_INPUT_SIZE = 64,
 
 <p align="center">
 <img src="https://github.com/songhengyang/face_landmark_factory/blob/master/data/smpl.gif", width="690">
@@ -100,7 +100,6 @@ Such as: CNN_INPUT_SIZE = 64,
 
     OUTPUT_DIR, converted to the path of the face box position data file and the face label data file in json format,
 
-    
     Such as: OUTPUT_DIR = "../data/json"
 
 - ./data_generate/manual_correct_label.py
