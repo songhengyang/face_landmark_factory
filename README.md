@@ -42,11 +42,11 @@ or
 
     VIDEO_PATH = 0 
 
-(0 means using a local camera as a video source)
+(0 means using a local camera as the input source)
 
-3. CNN_INPUT_SIZE, the height of the network input image (the same width and height)
+3.CNN_INPUT_SIZE, the height of the network input image (the same width and height), Such as
 
-    Such as: CNN_INPUT_SIZE = 64,
+    CNN_INPUT_SIZE = 64
 
 <p align="center">
 <img src="https://github.com/songhengyang/face_landmark_factory/blob/master/data/smpl.gif", width="690">
@@ -57,20 +57,19 @@ or
 
 ## Operating environment
 1. ubuntu 16.04.2
-2. 
 
 ## Dependency
-1. tensorflow 1.13
-2. keras 2.0 and above
-3. opencv 3.4 and above
-4. python3
+1.tensorflow 1.13
+2.keras 2.0 and above
+3.opencv 3.4 and above
+4.python3
 
 ## Tutorial
-1. <a href="#1">Automatic annotation of video files</a>
-2. <a href="#2">Data Preprocessing</a>
-3. <a href="#3">Data Training</a>
-4. <a href="#4">Model Conversion</a>
-5. <a href="#5">Model Testing</a>
+1.<a href="#1">Automatic annotation of video files</a>
+2.<a href="#2">Data Preprocessing</a>
+3.<a href="#3">Data Training</a>
+4.<a href="#4">Model Conversion</a>
+5.<a href="#5">Model Testing</a>
 
 ### <a name="1">Automatic annotation of video files</a>
 
@@ -78,15 +77,15 @@ or
 
     The tool reads the video file, uses the built-in facial landmark detection model of the system, recognizes the face image appearing in the frames, automatically performs face landmark annotation, generates a pts format file, the face image file and pts formatted dimension files are stored in the same directory.
 
-    Parameter Description:
+Parameter Description
 
-    MODEL_FILE, face landmark detection model file path,
+MODEL_FILE, file of the face landmark detection model, such as：
 
-    Such as: MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
+    MODEL_FILE = "../model/facial_landmark_MobileNet.pb"
 
-    VIDEO_PATH, video file path,
+VIDEO_PATH, file of the video, such as:
 
-    Such as: VIDEO_PATH = "../data/IU.avi"
+    VIDEO_PATH = "../data/IU.avi"
 
     OUTPUT_DIR, the face image and the path to the pts format annotation file,
 
